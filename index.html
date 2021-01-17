@@ -4,6 +4,7 @@
         <title>Google</title>        
         <!-- <link rel="stylesheet" href="css/reset.css"> -->
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="icon" type="image/png" href="img/favicon.ico">
     </head>
     <body>
         <header>
@@ -17,38 +18,67 @@
         <main>
             <!--Google logo-->
             <img src="img/googlelogo_color_272x92dp.png" class="google-logo" alt="Google">
-            <!--search bar-->
-            <div class="search-bar">
-                <div class="search-bar-inner">
-                    <!--search icon-->
-                    <div class="search-icon-container">
-                        <span class="search-icon">
-                            <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
-                            </svg>
-                        </span>
-                    </div>
-                    <!--search input-->
-                    <div class="search-input-container">
-                        <input class="search-input" maxlength="2048" type="text" title="Search" name="search" autocomplete="off">
-                    </div>
-                    <!--accessiblity buttons-->
-                    <div class="search-accessibility-container">
-                        <div class="accessibility-icon-container">
-                            <span class="keyboard-icon"></span>
+            <form class="search-form" action="/search">
+                <!--search bar-->
+                <div class="search-bar">
+                    <div class="search-bar-inner">
+                        <!--search icon-->
+                        <div class="search-icon-container">
+                            <span class="search-icon">
+                                <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                                </svg>
+                            </span>
                         </div>
-                        <div class="accessibility-icon-container">
-                            <svg class="mic-icon" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 15c1.66 0 3-1.31 3-2.97v-7.02c0-1.66-1.34-3.01-3-3.01s-3 1.34-3 3.01v7.02c0 1.66 1.34 2.97 3 2.97z" fill="#4285f4"></path><path d="m11 18.08h2v3.92h-2z" fill="#34a853"></path><path d="m7.05 16.87c-1.27-1.33-2.05-2.83-2.05-4.87h2c0 1.45 0.56 2.42 1.47 3.38v0.32l-1.15 1.18z" fill="#f4b400"></path><path d="m12 16.93a4.97 5.25 0 0 1 -3.54 -1.55l-1.41 1.49c1.26 1.34 3.02 2.13 4.95 2.13 3.87 0 6.99-2.92 6.99-7h-1.99c0 2.92-2.24 4.93-5 4.93z" fill="#ea4335"></path>
-                            </svg>
+                        <!--search input-->
+                        <div class="search-input-container">
+                            <input class="search-input" maxlength="2048" type="text" title="Search" name="search" autocomplete="off">
+                        </div>
+                        <!--accessiblity buttons-->
+                        <div class="search-accessibility-container">
+                            <div class="accessibility-icon-container">
+                                <span class="keyboard-icon"></span>
+                            </div>
+                            <div class="accessibility-icon-container">
+                                <svg class="mic-icon" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 15c1.66 0 3-1.31 3-2.97v-7.02c0-1.66-1.34-3.01-3-3.01s-3 1.34-3 3.01v7.02c0 1.66 1.34 2.97 3 2.97z" fill="#4285f4"></path><path d="m11 18.08h2v3.92h-2z" fill="#34a853"></path><path d="m7.05 16.87c-1.27-1.33-2.05-2.83-2.05-4.87h2c0 1.45 0.56 2.42 1.47 3.38v0.32l-1.15 1.18z" fill="#f4b400"></path><path d="m12 16.93a4.97 5.25 0 0 1 -3.54 -1.55l-1.41 1.49c1.26 1.34 3.02 2.13 4.95 2.13 3.87 0 6.99-2.92 6.99-7h-1.99c0 2.92-2.24 4.93-5 4.93z" fill="#ea4335"></path>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <!--buttons-->
+                <div class="search-buttons">
+                    <div class="search-buttons-container">
+                        <input class="search-button" value="Search Google" type="submit" aria-label="Search Google" name="btnK">
+                        <input class="search-button" value="I'm Feeling Lucky" type="submit" aria-label="I am lucky" name="btnI">
+                    </div>
+                </div>
+            </form>
+            <!--languages-->
+            <div class="language-links-container">
+                <div class="language-links">
+                    Google offered in: 
+                    <a href="https://www.google.com/setprefs?sig=0_y7vyDmnQii5tN1uXMRMa8cD9kEQ%3D&hl=fil&source=homepage&sa=X&ved=0ahUKEwixper8uKLuAhXDF4gKHezRC9MQ2ZgBCA8">Filipino</a>
+                </div>
             </div>
-            <div class="search-buttons">
-                <!--search google im feeling lucky-->
+        </main>
+        <footer>
+            <!--country-->
+            <div class="footer-country">
+                <span class="country">Philippines</span>
             </div>
             <!--links-->
-        </main>
-        <footer></footer>
+            <span class="footer-right">
+                <a href="https://policies.google.com/privacy?hl=fil&fg=1">Privacy</a>
+                <a href="https://policies.google.com/terms?hl=fil&fg=1">Terms</a>
+                <a href="https://www.google.com/preferences?hl=fil">Settings</a>
+            </span>
+            <span class="footer-left">
+                <a href="https://www.google.com/intl/fil_ph/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a>
+                <a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">Business</a>
+                <a href="https://about.google/?utm_source=google-PH&utm_medium=referral&utm_campaign=hp-footer&fg=1">About</a>
+                <a href="https://google.com/search/howsearchworks/?fg=1"> How Search works</a>
+            </span>
+        </footer>
     </body>
 </html>

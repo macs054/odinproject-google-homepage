@@ -9,9 +9,11 @@ body {
     font-size: 13px;
     justify-content: flex-end;
     margin: 15px 20px;
-    padding-right: 30px;
+    padding-right: 20px;
     align-items: center;
     text-align: right;
+    min-width: 220px;
+    position: relative;
 }
 
 .header-link {
@@ -56,11 +58,23 @@ a:visited {
     height: 30px;
 }
 
+main {
+    display: block;
+    width: auto;
+    min-width: 400px;
+    margin: 0 auto;
+}
+
 .google-logo {
     padding-top: 138px;
     padding-bottom: 28px;
     display: block;
     margin: 0 auto;
+}
+
+.search-form {
+    max-width: none;
+    margin: 0 32px;
 }
 
 .search-bar {
@@ -70,9 +84,12 @@ a:visited {
     border-radius: 24px;
     height: 44px;
     width: auto;
-    max-width: 484px;
+    max-width: 584px;
     min-width: 336px;
     margin: 0 auto;
+}
+
+.search-bar:hover {
     box-shadow: 0 1px 6px rgba(32,33,36,.28);
     border-color: rgba(223,225,229,0);
 }
@@ -153,3 +170,128 @@ a:visited {
     width: 24px;
     vertical-align: middle;
 }
+
+.search-buttons {
+    height: 70px;
+    padding-top: 18px;
+    top: 53px;
+    display: flex;
+}
+
+.search-buttons-container {
+    display: block;
+    margin: 0 auto;
+}
+
+.search-button {
+    background-image: -webkit-linear-gradient(top,#f8f9fa,#f8f9fa);
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.search-button:hover {
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    background-image: -webkit-linear-gradient(top,#f8f9fa,#f8f9fa);
+    background-color: #f8f9fa;
+    border: 1px solid #dadce0;
+    color: #202124;
+}
+
+.search-button:focus {
+    border: 1px solid #4d90fe;
+    outline: none;
+}
+
+.language-links-container {
+    margin-top: 12px;
+    margin-bottom: 24px;
+    display: flex;
+}
+
+.language-links {
+    font-size: small;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.language-links > a {
+    color: #1a0dab;
+    text-decoration: none;
+}
+
+.language-links > a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    background: #f2f2f2;
+    line-height: 40px;
+    border-top: 1px solid #dadce0;
+    min-width: 400px;
+    font-size: 14px;
+    margin-left: -27px;
+}
+
+.footer-right {
+    float: right;
+    margin-right: 30px;
+}
+
+.footer-left {
+    float: left;
+    margin-left: 30px;
+}
+
+.footer-country {
+    border-bottom: 1px solid #dadce0;
+    margin-left: 30px;
+    text-align: left;
+    color: rgba(0,0,0,.54);
+    padding-left: 27px;
+}
+
+.country {
+    font-size: 15px;
+}
+
+footer > span > a, 
+footer > span > a:visited {
+    display: inline-block;
+    color: #70757a;
+    text-decoration: none;
+    white-space: nowrap;
+    padding-left: 27px;
+    margin: 0 !important;
+}
+
+footer > span > a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 805px) {
+    footer {
+        text-align: center;
+    }
+
+    .footer-left, .footer-right {
+        display: block;
+        margin: 0;
+        float: none;
+    }
+}
+
